@@ -1,0 +1,40 @@
+<html>
+<head><title>Examples</title></head>
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<body>
+
+<h1>EXAMPLES</h1>
+
+
+<p>This page already has jQuery added. Open your dev console(F12 on Windows, CMD+ALT+J on Mac) and try the following codes.</p>
+<hr>
+
+
+<h2>Saving Data using POST</h2>
+<pre>
+	$.ajax({
+	    url: 'http://datastore.asadmemon.com/path/to/data', 
+	    type: 'POST', 
+	    contentType: 'application/json', 
+	    data: JSON.stringify({number:22,date: new Date()}),
+	success:function(res){console.log(res);}
+	});
+</pre>
+
+<p>Where <b>/path/to/data</b> is the path where you want to save your JSON data.</p>
+
+
+<hr>
+<h2>Pulling Data using GET</h2>
+<pre>
+	$.get('http://datastore.asadmemon.com/path/to/data',function(res){
+		console.log(res);
+	});
+</pre>
+
+<p>Where <b>/path/to/data</b> is the path where you want to save your JSON data.</p>
+
+
+
+</body>
+</html>
